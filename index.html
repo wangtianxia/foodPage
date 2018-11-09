@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name='viewport'
+          content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no' ,
+          viewport-fit=cover/>
+    <meta http-equiv="cleartype" content="on">
+    <meta name="apple-mobile-web-app-title" content="...">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="x-rim-auto-match" content="none">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="renderer" content="webkit">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <link rel="stylesheet" href="https://starcdn.xintiao100.com/starResources/libs/swiper-3.4.2.min.css"/>
+    <!--<link rel="stylesheet" href="css/style.css"/>-->
+    <link rel="stylesheet" href="build/css/index.css"/>
+    <title>熊猫美食App</title>
+    <script type="text/javascript" src="https://starcdn.xintiao100.com/starResources/libs/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="https://starcdn.xintiao100.com/starResources/libs/swiper-3.4.2.min.js"></script>
+    <script type="text/javascript" src="js/rem.js"></script>
+</head>
+<body>
+<!-- Swiper -->
+<div class="container">
+    <div id="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="img/1.jpg" style="width: 100%" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="img/2.jpg" style="width: 100%" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="img/3.jpg" style="width: 100%" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="img/4.jpg" style="width: 100%" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="img/5.jpg" style="width: 100%" alt="">
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <div class="fixed-box">
+        <div class="fixed-content">
+            <div class="img-box">
+                <img src="img/logo.png" alt="">
+            </div>
+            <div class="info-box">
+                <p>熊猫美食APP<br/>
+                    掌中应用尽览天下美食，足不出户尝遍四海美味。
+                </p>
+            </div>
+            <div class="down-load">
+                <p class="bar"></p>
+                <a class="down-load-btn" onclick="downLoadApp()">去下载</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    $(function () {
+        var swiper = new Swiper('#swiper-container', {
+            pagination: '.swiper-pagination',
+            paginationClickable: true,
+            speed: 800, //滑动时间
+            loop: true,
+            observer: true,
+            observeParents: true,
+            autoplayDisableOnInteraction: false,
+            autoplay: 3000 //停留时间
+        });
+
+//        document.body.addEventListener('touchmove',bodyScroll,false);
+//            $('body').css({'position':'fixed',"width":"100%"
+//         });
+
+    });
+    //禁止页面滑动
+    function bodyScroll(event){
+        event.preventDefault();
+    }
+    //去下载
+    function downLoadApp(){
+        window.location.href = 'https://www.baidu.com'
+    }
+
+</script>
+</body>
+</html>
